@@ -1,0 +1,61 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+}
+<style>
+    label
+    {
+        color:black;
+        text-transform:uppercase;
+        font-weight:500;
+    }
+</style>
+<script src="~/Scripts/jquery-3.4.1.js"></script>
+<script src="~/Content/Pages/Cart.js"></script>
+
+<h2>Cart</h2>
+<input type="hidden" id="hdnCartID" />
+<div class="row">
+    <div class="col-sm-3">
+
+<label>OrderID:</label>
+<input type="text" class="form-control" id="txtOrderID" placeholder="Enter Your OrderId" />
+<br />
+<label>ProductID:</label>
+<input type="text" class="form-control" id="txtProductID" placeholder="Enter Your ProductID" />
+<br />
+    </div>
+    <div class="col-md-auto">
+<label>Price:</label>
+<input type="text" class="form-control" id="txtPrice" placeholder="Enter Your Price" />
+<br />
+<label>Quantity:</label>
+<input type="text" class="form-control" id="txtQuantity" placeholder="Enter Your Quantity" />
+<br />
+        </div>
+    <div class="col-md-auto">
+
+        <label>Discount:</label>
+        <input type="text" class="form-control" id="txtDiscount" placeholder="Enter Your Discount" />
+        <br />
+        <label>Amount:</label>
+        <input type="text" class="form-control" id="txtAmount" placeholder="Enter Your Amount" />
+        <br />
+    </div>
+    </div>
+<input type="button" class="btn btn-primary"value="submit" onclick="SaveCart()" />
+<br />
+<table bgcolor="lightcyan" id="tblCart" border="1" class="table-bordered" >
+    <thead bgcolor="peachpuff">
+        <tr>
+            <th >CartID</th>
+            <th bgcolor="peachpuff">OrderID</th>
+            <th bgcolor="peachpuff">ProductID</th>
+            <th bgcolor="peachpuff">Price</th>
+            <th bgcolor="peachpuff">Quantity</th>
+            <th bgcolor="peachpuff">Amount</th>
+            <th bgcolor="peachpuff">Discount</th>
+        </tr>
+    </thead>
+    <tbody></tbody>
+</table> 

@@ -1,0 +1,93 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+}
+<script src="~/Scripts/jquery-3.4.1.js"></script>
+<script src="~/Content/Pages/Product.js"></script>
+
+<h2>Select a Product</h2>
+
+<style>
+    label {
+        color: black;
+        text-transform: uppercase;
+        font-weight: 500;
+    }
+
+    table, th, td {
+        border: 1px solid black;
+    }
+
+        table.center {
+            margin-left: auto;
+            margin-right: auto;
+        }
+</style>
+
+
+<input type="hidden" id="txthd" />
+
+<div class="row">
+    <div class="col-md-3">
+        <label>ProductName:</label>
+        <input type="text" class="form-control" id="txtProductName" placeholder="Enter ProductName" />
+        <br />
+        <label>ProductImage:</label>
+        <input type="file" class="form-control" id="txtProductImage" />
+        <br />
+        <label>Description:</label>
+        <input type="text" class="form-control" id="txtDescription" placeholder="Enter Description" />
+        <br />
+    </div>
+    <div class="col-md-3">
+        <label>MFGDate:</label>
+        <input type="date" class="form-control" id="txtMFGDate" />
+        <br />
+        <label>ExpiryDate:</label>
+        <input type="date" class="form-control" id="txtExpiryDate" />
+        <br />
+        <label>Price:</label>
+        <input type="text" class="form-control" id="txtPrice" placeholder="Enter Price" />
+        <br />
+    </div>
+    <div class="col-md-3">
+        <label>Discount:</label>
+        <input type="text" class="form-control" id="txtDiscount" placeholder="Enter Discount" />
+        <br />
+        <label>SGST:</label>
+        <input type="text" class="form-control" id="txtSGST" placeholder="Enter SGST" />
+        <br />
+        <label>CGST:</label>
+        <input type="text" class="form-control" id="txtCGST" placeholder="Enter CGST" />
+        <br />
+    </div>
+    <div class="col-md-3">
+        <label>IGST:</label>
+        <input type="text" class="form-control" id="txtIGST" placeholder="Enter IGST" />
+        <br />
+        <label>CategoryID:</label>
+        <input type="text" class="form-control" id="txtCategoryID" placeholder="Enter CategoryID" />
+        <br />
+    </div>
+</div>
+<input type="button" class="btn btn-primary" value="submit" onclick="SaveProduct()" />
+<br />
+<table id="tblProduct" class="center" border="1">
+    <thead>
+        <tr>
+            <th>ProductID</th>
+            <th>ProductName</th>
+            <th>ProductImage</th>
+            <th>Description</th>
+            <th>MFGDate</th>
+            <th>ExpiryDate</th>
+            <th>Price</th>
+            <th>Discount</th>
+            <th>SGST</th>
+            <th>CGST</th>
+            <th>IGST</th>
+            <th>CategoryID</th>
+        </tr>
+    </thead>
+    <tbody></tbody>
+</table>

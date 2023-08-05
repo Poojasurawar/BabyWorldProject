@@ -1,0 +1,98 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+}
+<script src="~/Scripts/jquery-3.4.1.js"></script>
+<script src="~/Content/Pages/Order.js"></script>
+
+<h2>Place Order</h2>
+<style>
+    label {
+        color: black;
+        text-transform: uppercase;
+        font-weight: 500;
+    }
+
+    table, th, td {
+        border: 1px solid black;
+    }
+
+        table.center {
+            margin-left: auto;
+            margin-right: auto;
+        }
+</style>
+
+
+<input type="hidden" id="txthd" />
+<br />
+<div class="row">
+    <div class="col-md-3">
+        <label>CustomerID:</label>
+        <input type="text" class="form-control" id="txtCustomerID" placeholder="Enter CustomerID" />
+        <br />
+        <label>Amount:</label>
+        <input type="text" class="form-control" id="txtAmount" placeholder="Enter Amount" />
+        <br />
+        <label>Discount:</label>
+        <input type="text" class="form-control" id="txtDiscount" placeholder="Enter Discount" />
+        <br />
+    </div>
+    <div class="col-md-3">
+        <label>TotalAmount:</label>
+        <input type="text" class="form-control" id="txtTotalAmount" placeholder="Enter TotalAmount" />
+        <br />
+        <label>OrdrDate:</label>
+        <input type="date" class="form-control" id="txtOrderDate" />
+        <br />
+        <label>PaymentMode:</label>
+        <select class="form-control" id="txtPaymentMode">
+            <option>UPI</option>
+            <option>Debit Card</option>
+            <option>Credit Card</option>
+            <option>Cash</option>
+            <option>Other</option>
+        </select>
+        <br />
+    </div>
+    <div class="col-md-3">
+        <label>SGST:</label>
+        <input type="text" class="form-control" id="txtSGST" placeholder="Enter SGST" />
+        <br />
+        <label>CGST:</label>
+        <input type="text" class="form-control" id="txtCGST" placeholder="Enter CGST" />
+        <br />
+        <label>IGST:</label>
+        <input type="text" class="form-control" id="txtIGST" placeholder="Enter IGST" />
+        <br />
+    </div>
+    <div class="col-md-3">
+        <label>DeliveryDate:</label>
+        <input type="date" class="form-control" id="txtDeliveryDate" placeholder="Enter DeliveryDate" />
+        <br />
+        <label>DeliveryPerson:</label>
+        <input type="text" class="form-control" id="txtDeliveryPerson" placeholder="Enter DeliveryPerson" />
+        <br />
+    </div>
+</div>
+<input type="button"  class="btn btn-primary" value="submit" onclick="SaveOrder()" />
+
+<table id="tblOrder" class="center" border="1">
+    <thead>
+        <tr>
+            <th>OrderID</th>
+            <th>CustomerID</th>
+            <th>Amount</th>
+            <th>Discount</th>
+            <th>TotalAmount</th>
+            <th>OrderDate</th>
+            <th>PaymentMode</th>
+            <th>SGST</th>
+            <th>CGST</th>
+            <th>IGST</th>
+            <th>DeliveryDate</th>
+            <th>DeliveryPerson</th>
+        </tr>
+    </thead>
+    <tbody></tbody>
+</table>

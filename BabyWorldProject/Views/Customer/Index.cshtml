@@ -1,0 +1,61 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+}
+<script src="~/Scripts/jquery-3.4.1.js"></script>
+<script src="~/Content/Pages/Customer.js"></script>
+
+
+<h2>Customer</h2>
+<style>
+    label {
+        color: black;
+        text-transform: uppercase;
+        font-weight: 500;
+    }
+    table, th, td {
+        border: 1px solid black;
+    }
+
+        table.center {
+            margin-left: auto;
+            margin-right: auto;
+        }
+</style>
+<label>CustomerID:</label>
+<input type="hidden" id="hdnid" />
+<br />
+<div class="row">
+    <div class="col-md-auto">
+<label>Name:</label>
+<input type="text" class="form-control" id="txtName" placeholder="Enter Name" />
+<br />
+<label>MobileNo:</label>
+<input type="text" class="form-control" id="txtMobileNo" placeholder="Enter Mobile Number" />
+<br />
+        </div>
+    <div class="col-md-auto">
+<label>Emailid:</label>
+<input type="text" class="form-control" id="txtEmail" placeholder="Name@example.com" />
+<br />
+  <br />
+<label>Password(min 8 characters)</label>
+<input type="password" id="pass" name="password"
+       minlength="8" required>
+<br />
+        </div>
+    </div>
+<input type="button" class="btn btn-primary" value="submit" onclick="SaveCustomer()" />
+
+<table bgcolor="lightyellow"id="tblCustomer" class="center"border="1">
+    <thead bgcolor="lime">
+        <tr>
+            <th>CustomerID</th>
+            <th>Name</th>
+            <th>Mobileno</th>
+            <th>Email ID</th>
+            <th>Password</th>
+        </tr>
+    </thead>
+    <tbody></tbody>
+</table>

@@ -1,0 +1,49 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+}
+<script src="~/Scripts/jquery-3.4.1.js"></script>
+<script src="~/Content/Pages/Category.js"></script>
+
+<h2>Category</h2>
+<style>
+    label {
+        color: black;
+        text-transform: uppercase;
+        font-weight: 500;
+    }
+
+    
+    table, th, td {
+        border: 1px solid black;
+    }
+
+    table.center {
+        margin-left: auto;
+        margin-right: auto;
+    }
+</style>
+
+
+<label>CategoryID:</label>
+<input type="hidden" id="hdCategoryID" />
+<br />
+<label>Name:</label>
+<input type="text" class="form-control" id="txtName" placeholder="Enter Name" style="color:deeppink;" />
+<br />
+<label>Details:</label>
+<input type="text" class="form-control" id="txtDetails" placeholder="Enter Details" style="color:deeppink;" />
+<br />
+<input type="button" class="btn btn-primary" value="submit" onclick="SaveCategory()" />
+
+<table bgcolor="lightcyan" id="tblCategory" class="center" border="1">
+    <thead bgcolor="lightgreen">
+        <tr>
+            <th>CategoryID</th>
+            <th>Name</th>
+            <th>Details</th>
+
+        </tr>
+    </thead>
+    <tbody></tbody>
+</table>
